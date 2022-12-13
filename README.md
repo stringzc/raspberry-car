@@ -8,8 +8,8 @@
 
 #### 教程
 
-1.  小车组装+操作系统安装等操作
-2.  CSI摄像头激活
+### 小车组装+操作系统安装等操作
+### CSI摄像头激活
     步骤1 分布执行以下命令行进行下载并安装最新的内核，GPU 固件及应用程序。
     sudo apt-get update
     sudo apt-get upgrade
@@ -25,7 +25,7 @@
     raspistill -v -o test.jpg
     出现以下内容应该是ok了
     ![输入图片说明](image/4.png)
-3.  python环境搭建
+### python环境搭建
     （1）python 下载
         sudo apt-get update
         sudo apt-get install python3.8
