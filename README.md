@@ -25,6 +25,7 @@
     raspistill -v -o test.jpg
     出现以下内容应该是ok了
     ![输入图片说明](image/4.png)
+
 3.python环境搭建
    （1）python 下载
         sudo apt-get update
