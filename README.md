@@ -9,7 +9,14 @@
 #### 教程
 
 1.  小车组装+操作系统安装等操作
-2.  摄像头激活
+2.  CSI摄像头激活
+步骤1 分布执行以下命令行进行下载并安装最新的内核，GPU 固件及应用程序。
+sudo apt-get update
+sudo apt-get upgrade
+步骤2 运行树莓派配置工具来激活摄像头模块.
+sudo raspi-config
+![Image text](https://gitee.com/stringzc/raspberry-car/blob/master/image/1.png)
+
 3.  python环境搭建
 4.  QT界面设计
 5.  实时图像传输
