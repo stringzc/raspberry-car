@@ -83,13 +83,13 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     daemon_threads = True
 
 
-with picamera.PiCamera(resolution='1920x1080', framerate=24) as camera:
+with picamera.PiCamera(resolution='1920x1080', framerate=15) as camera:
     output = StreamingOutput()
     # Uncomment the next line to change your Pi's Camera rotation (in degrees)
     # camera.rotation = 90
     camera.start_recording(output, format='mjpeg')
     try:
-        address = ('172.20.10.3', 8000)
+        address = ('192.168.43.230', 8000)
         server = StreamingServer(address, StreamingHandler)
         server.serve_forever()
     finally:

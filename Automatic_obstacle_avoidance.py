@@ -5,6 +5,8 @@ from infrared import Infrared
 
 FPS2 = 0.1 * 1.4
 FPS = 0.1
+
+
 LEFTTIME = 0.2136
 RIGHTTIME = 0.1461
 LEFTTIME_MC = 0.0712
@@ -36,7 +38,9 @@ class Avoidance(CarMove, Infrared):
 
     def goahead(self):
         self.update_ahead()
+        msgs = 'ok'
         while self.ahead_statue != "111":
+            msgs = 'doit'
             self.update_ahead()
             if self.ahead_statue == "110":
                 self.turnleft_and_go()
@@ -53,10 +57,10 @@ class Avoidance(CarMove, Infrared):
             elif self.ahead_statue == "000":
                 self.allstop()
         else:
-            self.frontTime(FPS)
+            self.go()
             self.update_ahead()
 
-        self.stacks.clear()
+        return msgs
 
     def go(self):
         self.update_ahead()
@@ -105,6 +109,22 @@ class Avoidance(CarMove, Infrared):
         self.update_ahead()
         if self.ahead_statue[0:2] == '11':
             self.rightTime(FPS)
+        else:
+            return False
+        return True
+
+    def turnlefts(self, times):
+        self.update_ahead()
+        if self.ahead_statue[1:] == '11':
+            self.leftTime(times)
+        else:
+            return False
+        return True
+
+    def turnrights(self, times):
+        self.update_ahead()
+        if self.ahead_statue[0:2] == '11':
+            self.rightTime(times)
         else:
             return False
         return True
@@ -310,12 +330,12 @@ class Avoidance(CarMove, Infrared):
             self.turnback_and_left()
 
     def Keep_turning_right(self):  # 按照正常的理解来，这个函数要实现小车向右转
-        if not self.turnleft():
+        if not self.turnlefts(FPS2):
             if not self.back():
                 self.go()
 
     def Keep_turning_left(self):
-        if not self.turnright():
+        if not self.turnrights(FPS):
             if not self.back():
                 self.go()
 

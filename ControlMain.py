@@ -5,8 +5,8 @@ from Automatic_obstacle_avoidance import Avoidance
 
 LEFTTIME = 0.2136
 RIGHTTIME = 0.1461
-LEFTTIME_MC = 0.0712
-RIGHTTIME_MC = 0.0487
+LEFTTIME_MC = 0.02
+RIGHTTIME_MC = 0.01
 
 avoidance = Avoidance()
 
@@ -18,6 +18,7 @@ def recv(client_socket, ip_port):
     while True:
         status = client_socket.recv(1024)
         print(status)
+        msgs = 'ok'
         # 如果接收的消息长度不为0，则将其解码输出
         if status:
             if status == b"w":
@@ -41,11 +42,11 @@ def recv(client_socket, ip_port):
             elif status == b"lmc":
                 avoidance.rightTime(RIGHTTIME_MC)
             elif status == b"go":
-                avoidance.goahead()
+                msgs = avoidance.goahead()
             elif status == b'p':
                 avoidance.setup()
 
-            client_socket.send("ok".encode('utf-8'))
+            client_socket.send(msgs.encode('utf-8'))
         # 当客户端断开连接时，会一直发送''空字符串，所以长度为0已下线
         else:
             print("客户端", ip_port, "已下线")
