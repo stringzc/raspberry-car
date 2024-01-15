@@ -15,16 +15,16 @@
     sudo apt-get upgrade
     步骤2 运行树莓派配置工具来激活摄像头模块.
     sudo raspi-config
-    ![输入图片说明](image/1.png)
+    ![输入图片说明](/image/1.png)
     点击 ok
-    ![输入图片说明](image/2.png)
+    ![输入图片说明](/image/2.png)
     选择Interface Options
-    ![输入图片说明](image/3.png)
+    ![输入图片说明](/image/3.png)
     选择第一个，后面一直选择OK就行。
     用如下命令使用摄像头。
     raspistill -v -o test.jpg
     出现以下内容应该是ok了
-    ![输入图片说明](image/4.png)
+    ![输入图片说明](/image/4.png)
 
 ##### 3.python环境搭建
 ###### （1）python 下载
@@ -50,19 +50,18 @@
         豆瓣：http://pypi.douban.com/simple/    
         pip install opencv-python  -i https://pypi.tuna.tsinghua.edu.cn/simple 临时用用也行  
         d.进入python导入cv2包没问题就下载好了
-    （3）安装GPIO相关库  
+######     （3）安装GPIO相关库  
         pip install rpi.gpio
-    （4）安装CSI摄像头相关库
+######     （4）安装CSI摄像头相关库
         pip install picamera
-4.  QT界面设计
-5.  实时图像传输
-6.  自动避障
-7.  目标检测
+##### 4.  QT界面设计
+QT界面是设计的一个显示图像信息以及简单的控制界面
+##### 5.  实时图像传输
+使用的是忘记了什么协议（这个是后面来补的）
+##### 6.  自动避障
+自动避障程序为本项目根据传感器数据编写的一套完整的避障程序
+##### 7.  目标检测
+目标检测部分使用是yolov5，内容对应在AI文件内
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 
