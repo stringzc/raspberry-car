@@ -39,7 +39,7 @@
         查看：pip list
 ######        b.如果报这个错 libcblas.so.3: cannot open shared object file: No such file or directory
         sudo apt-get install libatlas-base-dev
-        c.安装opencv
+######         c.安装opencv
         pip install opencv-python  
 ######         下载可能会很慢，建议换源
         清华：https://pypi.tuna.tsinghua.edu.cn/simple
