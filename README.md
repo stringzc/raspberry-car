@@ -50,9 +50,9 @@
         豆瓣：http://pypi.douban.com/simple/    
         pip install opencv-python  -i https://pypi.tuna.tsinghua.edu.cn/simple 临时用用也行  
 ######         d.进入python导入cv2包没问题就下载好了
-######     （3）安装GPIO相关库  
+###### （3）安装GPIO相关库  
         pip install rpi.gpio
-######     （4）安装CSI摄像头相关库
+###### （4）安装CSI摄像头相关库
         pip install picamera
 ##### 4.  QT界面设计
 QT界面是设计的一个显示图像信息以及简单的控制界面
