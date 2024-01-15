@@ -31,17 +31,17 @@
         sudo apt-get update
         sudo apt-get install python3.8
 ###### (2)opencv 下载
-######         因为opencv存在一些依赖问题所以安装前需要提前安装一些内容
-######         a.numpy 安装较新的版本
+        因为opencv存在一些依赖问题所以安装前需要提前安装一些内容
+#######         a.numpy 安装较新的版本
         安装：pip install numpy 
         升级：pip install --upgrade numpy
         卸载：pip uninstall numpy
         查看：pip list
-######        b.如果报这个错 libcblas.so.3: cannot open shared object file: No such file or directory
+#######        b.如果报这个错 libcblas.so.3: cannot open shared object file: No such file or directory
         sudo apt-get install libatlas-base-dev
-######         c.安装opencv
+#######         c.安装opencv
         pip install opencv-python  
-######         下载可能会很慢，建议换源
+#######         下载可能会很慢，建议换源
         清华：https://pypi.tuna.tsinghua.edu.cn/simple
         阿里云：http://mirrors.aliyun.com/pypi/simple/
         中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
@@ -49,7 +49,7 @@
         山东理工大学：http://pypi.sdutlinux.org/ 
         豆瓣：http://pypi.douban.com/simple/    
         pip install opencv-python  -i https://pypi.tuna.tsinghua.edu.cn/simple 临时用用也行  
-######         d.进入python导入cv2包没问题就下载好了
+#######         d.进入python导入cv2包没问题就下载好了
 ###### （3）安装GPIO相关库  
         pip install rpi.gpio
 ###### （4）安装CSI摄像头相关库
