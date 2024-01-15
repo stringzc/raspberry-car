@@ -8,8 +8,8 @@
 
 #### 教程
 
-1.小车组装+操作系统安装等操作
-2.CSI摄像头激活
+##### 1.小车组装+操作系统安装等操作
+##### 2.CSI摄像头激活
     步骤1 分布执行以下命令行进行下载并安装最新的内核，GPU 固件及应用程序。
     sudo apt-get update
     sudo apt-get upgrade
@@ -26,11 +26,11 @@
     出现以下内容应该是ok了
     ![输入图片说明](image/4.png)
 
-3.python环境搭建
-    （1）python 下载
+##### 3.python环境搭建
+###### （1）python 下载
         sudo apt-get update
         sudo apt-get install python3.8
-    (2)opencv 下载
+###### (2)opencv 下载
         因为opencv存在一些依赖问题所以安装前需要提前安装一些内容
         a.numpy 安装较新的版本
         安装：pip install numpy 
